@@ -49,6 +49,7 @@ flutter:
     - assets/blackboardBg4.jpg
     - assets/deweysLogo_mobile_white.png
     - assets/Tileable-High-Res-Metal-Textures.jpg
+    - assets/Logo_Deweys_horizontal-1_resized.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,28 +1,16 @@
+import 'package:deweys_pizza/deweysAppBar.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  static const routeName = '/';
+class Dewmore extends StatefulWidget {
+  static const routeName = '/dewmore';
   @override
-  _HomeState createState() => _HomeState();
+  _DewmoreState createState() => _DewmoreState();
 }
 
-class _HomeState extends State<Home> {
+class _DewmoreState extends State<Dewmore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        flexibleSpace: Image(
-          image: AssetImage('assets/blackboardBg4.jpg'),
-          fit: BoxFit.cover,
-        ),
-        leading: Padding(
-          padding: const EdgeInsets.fromLTRB(8.0, 3.0, 0.0, 17.0),
-          child: Image(
-            image: AssetImage('assets/deweysLogo_mobile_white.png'),
-          ),
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
