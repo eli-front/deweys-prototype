@@ -26,7 +26,6 @@ class _DeweysAppBarState extends State<DeweysAppBar> {
       child: Image(
         image: AssetImage('assets/Logo_Deweys_horizontal-1_resized.png'),
         height: 35,
-        repeat: ImageRepeat.repeatY,
       ),
     ),
     );

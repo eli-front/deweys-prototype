@@ -1,5 +1,6 @@
 import 'package:deweys_pizza/deweysAppBar.dart';
 import 'package:deweys_pizza/dewmore.dart';
+import 'package:deweys_pizza/homeOption.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -12,9 +13,10 @@ class _HomeState extends State<Home> {
 
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
-    Dewmore(),
+    HomeOption(),
     Text('Hellow'),
-    Text('Hi')
+    Text('Hi'),
+    Dewmore(),
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -38,12 +40,17 @@ class _HomeState extends State<Home> {
             title: Text('Menu'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
-            title: Text('Contact'),
+            icon: Icon(Icons.location_on),
+            title: Text('Locations'),
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.brightness_1),
+            title: Text('Other')
+          )
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black54,
         onTap: _onItemTapped,
       ),
     );
