@@ -18,7 +18,7 @@ class _DeweysAppBarState extends State<DeweysAppBar> {
       elevation: 0,
       backgroundColor: Colors.transparent,
       flexibleSpace: Image(
-        image: AssetImage('assets/blackboardBg4.jpg'),
+        image: AssetImage('assets/blackboardBg4.png'),
         fit: BoxFit.cover,
       ),
       title: Padding(
