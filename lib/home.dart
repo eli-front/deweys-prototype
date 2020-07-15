@@ -27,6 +27,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(7, 7, 7, 1.0),
       appBar: DeweysAppBar(),
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
