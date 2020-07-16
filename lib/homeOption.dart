@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:deweys_pizza/textPresets.dart';
 
 class HomeOption extends StatelessWidget {
 
@@ -76,15 +77,7 @@ class HomeOption extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.all(25.0),
-          child: Text(
-            'WE STAY SERIOUS ABOUT PIZZA',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontFamily: 'Raleway'
-            ),
-            textAlign: TextAlign.center,
-          ),
+          child: RalewayText('WE STAY SERIOUS ABOUT PIZZA', 30,),
         ),
         PromotionStack(
           'assets/1za.png',
@@ -94,15 +87,7 @@ class HomeOption extends StatelessWidget {
                 borderRadius: BorderRadius.circular(6.0),
                 side: BorderSide(color: Colors.red)
             ),
-            child: Text(
-              'VIEW MENU',
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'RobotoSlab',
-                fontSize: 20
-              ),
-              textAlign: TextAlign.center,
-            ),
+            child: RobotoSlabText('VIEW MENU', 30,),
             onPressed: () {
               print('Locations');
             },
@@ -110,15 +95,7 @@ class HomeOption extends StatelessWidget {
         ),
         PromotionStack(
           'assets/2leaf.png',
-          Text(
-            'ALWAYS FRESH\nHIGH-QUALITY\nINGREDIENTS',
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Raleway',
-              fontSize: 40
-            ),
-            textAlign: TextAlign.center,
-          )
+          RalewayText('ALWAYS FRESH\nHIGH-QUALITY\nINGREDIENTS', 40,)
         ),
         PromotionStack(
           'assets/Kenwood-web.png',
@@ -128,15 +105,7 @@ class HomeOption extends StatelessWidget {
                 borderRadius: BorderRadius.circular(6.0),
                 side: BorderSide(color: Colors.red)
             ),
-            child: Text(
-              'Locations',
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'RobotoSlab',
-                fontSize: 20
-              ),
-              textAlign: TextAlign.center,
-            ),
+            child: RobotoSlabText('Locations', 30,),
             onPressed: () {
               print('Locations');
             },
@@ -152,26 +121,10 @@ class HomeOption extends StatelessWidget {
             ),
           ),
         ),
-        Text(
-          'SO MUCH MORE',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontFamily: 'Raleway'
-          ),
-          textAlign: TextAlign.center,
-        ),
+        RalewayText('SO MUCH MORE',30,),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            "Pizza may rock the center stage, but don't underestimate our salads and calzones...",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 13,
-                fontFamily: 'RobotoSlab'
-            ),
-            textAlign: TextAlign.center,
-          ),
+          child: RobotoSlabText("Pizza may rock the center stage, but don't underestimate our salads and calzones...",13,),
         ),
         Container(
           child: CarouselSlider.builder(
@@ -209,6 +162,168 @@ class HomeOption extends StatelessWidget {
               )
           ),
         ),
+        Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Image(
+              image: AssetImage('assets/Metal-Layer.png'),
+              fit: BoxFit.cover,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RalewayText('JOIN OUR CREW', 25,),
+                  RobotoSlabText('We are always looking for dynamic people who have a strong passion for food and people. Management, Service Team and Pizza Maker positions are open for applications.', 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: RedButton('APPLY NOW'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Image(
+                          width: MediaQuery.of(context).size.width/7,
+                          image: AssetImage('assets/topwork.png'),
+                          fit: BoxFit.fitWidth,
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+        Stack(
+          alignment: Alignment.centerLeft,
+          children: [
+            Image(
+              image: AssetImage('assets/drink-shot.png'),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RalewayText('CRAFT BREWS &\nAMAZING WINE\nSELECTIONS', 27, alignment: TextAlign.left,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: RobotoSlabText('We keep our taps flowing with local and national beers and a great selection of fine wines', 15, alignment: TextAlign.left,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RalewayText('FIND A DEWEYS NEAR YOU!', 17,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: RedButton('LOCATIONS', size: 18,),
+                )
+              ],
+            ),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Image(
+                image: AssetImage('assets/icon_heart.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: RalewayText('GIFT & RECIEVE', 40),
+              ),
+              RobotoSlabText("Share the love with a Dewey's gift card or hook yourself up by joining our rewards program below.", 15,)
+            ],
+          ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Image(
+                image: AssetImage('assets/Deweys-GC-support-images.png'),
+              ),
+              Column(
+                children: [
+                  RalewayText('GIVE THE GIFT\nOF PIZZA', 40,),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 4.0),
+                    child: RedButton('BUY NOW'),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          height: 200.0,
+          color: Color.fromRGBO(245, 245, 245, 1.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Expanded(
+                flex: 1,
+                child: Image(
+                  image: AssetImage('assets/thanx_phone_resized.png'),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.65,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Positioned(
+                            bottom: 6.0,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width / 1.5,
+                              height: 3.0,
+                              color: Colors.black,
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 6,
+                            height: MediaQuery.of(context).size.width / 6,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                image: AssetImage('assets/thankx-logo.png'),
+                                fit: BoxFit.contain
+                              )
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    RalewayText('EARN FREE REWARDS', 23, color: Colors.black,),
+                    RobotoSlabText('BY EATING PIZZA', 15, color: Colors.black,),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 3.0,
+                        width: MediaQuery.of(context).size.width / 1.65,
+                        color: Colors.black,
+                      ),
+                    ),
+                    RedButton('LEARN MORE')
+                  ],
+                )
+              )
+            ],
+          ),
+        )
       ],
     );
   }
@@ -227,30 +342,14 @@ class CarouselText extends StatelessWidget {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            sects[0],
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontFamily: 'Raleway'
-            ),
-            textAlign: TextAlign.center,
-          ),
+          RalewayText(sects[0], 30,),
           FlatButton(
             color: btnColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
                 side: BorderSide(color: btnColor)
             ),
-            child: Text(
-              sects[1],
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontFamily: 'RobotoSlab'
-              ),
-              textAlign: TextAlign.center,
-            ),
+            child: RobotoSlabText(sects[1], 20,),
             onPressed: () {
               print(sects[1]);
             },
@@ -264,21 +363,12 @@ class CarouselText extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
             side: BorderSide(color: btnColor)
         ),
-        child: Text(
-          words,
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontFamily: 'RobotoSlab'
-          ),
-          textAlign: TextAlign.center,
-        ),
+        child: RobotoSlabText(words, 20,),
         onPressed: () {
           print(words);
         },
       );
     }
-
   }
 }
 
