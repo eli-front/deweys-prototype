@@ -52,7 +52,7 @@ class RedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      color: Colors.red,
+      color: Color.fromRGBO(194, 0, 33, 1.0),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
       ),

@@ -47,7 +47,7 @@ class HomeOption extends StatelessWidget {
                         fit: BoxFit.fitHeight,
                       ),
                     ),
-                    CarouselText(_messageList[index], Colors.transparent)
+                    CarouselText(_messageList[index], btnColor: Colors.transparent)
                   ],
                 ),
               );
@@ -81,17 +81,7 @@ class HomeOption extends StatelessWidget {
         ),
         PromotionStack(
           'assets/1za.png',
-          FlatButton(
-            color: Colors.red,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(6.0),
-                side: BorderSide(color: Colors.red)
-            ),
-            child: RobotoSlabText('VIEW MENU', 30,),
-            onPressed: () {
-              print('Locations');
-            },
-          )
+          RedButton('View Menu')
         ),
         PromotionStack(
           'assets/2leaf.png',
@@ -99,17 +89,7 @@ class HomeOption extends StatelessWidget {
         ),
         PromotionStack(
           'assets/Kenwood-web.png',
-          FlatButton(
-            color: Colors.red,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(6.0),
-                side: BorderSide(color: Colors.red)
-            ),
-            child: RobotoSlabText('Locations', 30,),
-            onPressed: () {
-              print('Locations');
-            },
-          )
+          RedButton('Locations')
         ),
         Padding(
           padding: const EdgeInsets.all(25.0),
@@ -141,7 +121,7 @@ class HomeOption extends StatelessWidget {
                           fit: BoxFit.fitHeight,
                         ),
                       ),
-                      CarouselText(_messageList2[index], Colors.red)
+                      CarouselText(_messageList2[index])
                     ],
                   ),
                 );
@@ -333,7 +313,7 @@ class CarouselText extends StatelessWidget {
 
   final String words;
   final Color btnColor;
-  CarouselText(this.words, this.btnColor);
+  CarouselText(this.words, {this.btnColor});
 
   @override
   Widget build(BuildContext context) {
@@ -344,10 +324,10 @@ class CarouselText extends StatelessWidget {
         children: [
           RalewayText(sects[0], 30,),
           FlatButton(
-            color: btnColor,
+            color: btnColor ?? Color.fromRGBO(194, 0, 33, 1.0),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
-                side: BorderSide(color: btnColor)
+                side: BorderSide(color: btnColor ?? Color.fromRGBO(194, 0, 33, 1.0))
             ),
             child: RobotoSlabText(sects[1], 20,),
             onPressed: () {
@@ -357,17 +337,7 @@ class CarouselText extends StatelessWidget {
         ],
       );
     } else {
-      return FlatButton(
-        color: btnColor,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8.0),
-            side: BorderSide(color: btnColor)
-        ),
-        child: RobotoSlabText(words, 20,),
-        onPressed: () {
-          print(words);
-        },
-      );
+      return RedButton(words, size: 20,);
     }
   }
 }
