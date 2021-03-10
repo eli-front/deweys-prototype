@@ -1,16 +1,8 @@
 # deweys_pizza
 
-Deweys Pizza
+A video of this project can be found [https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTAxMDIzMTc5NTEzMDIz?igshid=1on01unq4lck4&story_media_id=2357243631171341466](here)
 
-## Getting Started
+I used this project to learn more about Flutter Design. It hasn't been updated recently, so I wouldn't be surprised if it didin't work with the current Flutter version.
 
-This project is a starting point for a Flutter application.
+Inspired by [https://deweyspizza.com/menu/from-the-kitchen/](https://deweyspizza.com/menu/from-the-kitchen/)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
